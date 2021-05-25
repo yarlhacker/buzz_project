@@ -17,17 +17,21 @@ def about(request):
 
 
 def contact(request):
-    return render(request, 'contact.html')
+    siteweb = models.SiteWeb.objects.filter(status=True)
+    return render(request, 'contact.html',locals())
 
 def pricing(request):
-    return render(request, 'pricing.html')
+    siteweb = models.SiteWeb.objects.filter(status=True)
+    return render(request, 'pricing.html',locals())
 
 def work(request):
-    return render(request, 'work.html')
+    siteweb = models.SiteWeb.objects.filter(status=True)
+    return render(request, 'work.html',locals())
 
 def work_pricing(request,id):
     work = get_object_or_404(models_service.Work, id=id)
-    return render(request, 'work-single.html')
+    siteweb = models.SiteWeb.objects.filter(status=True)
+    return render(request, 'work-single.html',locals())
 
 
 # Create your views here.
