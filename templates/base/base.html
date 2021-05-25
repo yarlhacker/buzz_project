@@ -81,7 +81,7 @@ https://templatemo.com/tm-561-purple-buzz
             <div class="row py-4">
 
                 <div class="col-lg-3 col-12 align-left">
-                    {% comment %} {% for site in siteweb %} {% endcomment %}
+                    {% for site in siteweb %}
                         <a class="navbar-brand" href="{% url 'index' %}">
                             <i class='{{site.icon_logo}}'></i>
                             {{site.titre_logo|safe}}
@@ -90,7 +90,7 @@ https://templatemo.com/tm-561-purple-buzz
                     <p class="text-light my-lg-4 my-2">
                         {{site.description_footer}}
                     </p>
-                    {% comment %} {% endfor %} {% endcomment %}
+                    {% endfor %}
                     <ul class="list-inline footer-icons light-300">
                         <li class="list-inline-item m-0">
                             <a class="text-light" target="_blank" href="http://facebook.com/">
